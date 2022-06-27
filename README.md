@@ -16,23 +16,24 @@ cd tdc_regression
 bash reg_data_generation.sh 
 ```
 For training the network : 
+
 ```bash
 cd tdc_regression
 bash train_reg_model.sh 
+```
 
-### Demo File 
+## Demo File 
 For showcasing a demo of the model , please use the .csv files with CDDD descriptors to save time . 
 ```bash
 python3 testing.py --csv_file 'test_results.csv' --checkpointfile 'optimal_checkpoint.pth'
 ```
-```
+
 ## Generating CDDD Descriptors 
 Given a .csv file with SMILES column , one can now generate the corresponding descriptor files , by running the following bash files & placing the datafiles in appropriate directory . 
 Make sure you place your csv files in data_files_admet 
 ```bash
 cd cddd/cddd
 bash descriptor_batch.sh 
-SEE THIS 
 ```
 
 ## Network Inference
