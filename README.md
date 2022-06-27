@@ -38,9 +38,15 @@ bash descriptor_batch.sh
 
 ## Network Inference
 Given a .csv file , with only SMILEs as the input , one has to follow thse steps : 
+```bash
+cd cddd/cddd
+python3 run_cddd.py --use_gpu --input <csvFileName> --output <outputDescriptorFile>  --smiles_header molecule_smiles
+```
+* Move the outputDescriptorFile outside cddd/ folder , and test it with : 
+```bash
+python3 testing.py --csv_file <outputFileName> --mode 'test' --checkpointfile 'optimal_checkpoint'
 
-
-
+```
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
